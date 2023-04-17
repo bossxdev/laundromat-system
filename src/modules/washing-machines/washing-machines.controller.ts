@@ -13,8 +13,8 @@ const getMachines = catchAsync(async (req, res) => {
 	res.send(machines);
 });
 
-const getMachinesAvailable = catchAsync(async (req, res) => {
-	const machines = await WashingMachinesService.queryMachinesAvailable();
+const getMachinesAvail = catchAsync(async (req, res) => {
+	const machines = await WashingMachinesService.queryMachinesAvail();
 	res.send(machines);
 });
 
@@ -36,4 +36,4 @@ const deleteMachine = catchAsync(async (req, res) => {
 	res.status(httpStatus.NO_CONTENT).send();
 });
 
-export default { createMachine, getMachines,getMachinesAvailable, getMachine, updateMachine, deleteMachine };
+export default { createMachine, getMachines, getMachinesAvail, getMachine, updateMachine, deleteMachine };

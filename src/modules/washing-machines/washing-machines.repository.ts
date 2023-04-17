@@ -28,8 +28,8 @@ class WashingMachinesRepository extends Repository<WashingMachines> {
 	/**
 	 * Find available machine
 	 */
-	public async findAvailable() {
-		return this.find({ where:  Status.AVAILABLE  });
+	public async findAvail() {
+		return this.find({ where: { status: Status.AVAILABLE } });
 	}
 
 	/**

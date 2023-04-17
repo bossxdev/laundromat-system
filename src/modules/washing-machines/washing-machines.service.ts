@@ -23,8 +23,8 @@ class WashingMachinesService {
 	/**
 	 * Find all available
 	 */
-	public async queryMachinesAvailable() {
-		return await getCustomRepository(WashingMachinesRepository).findAvailable();
+	public async queryMachinesAvail() {
+		return await getCustomRepository(WashingMachinesRepository).findAvail();
 	}
 
 	/**

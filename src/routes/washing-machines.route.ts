@@ -10,9 +10,7 @@ router
 	.post(validate(washingMachinesValidation.createMachine), washingController.createMachine)
 	.get(validate(washingMachinesValidation.getMachines), washingController.getMachines);
 
-router
-	.route('/machines-available')
-	.get(validate(washingMachinesValidation.getMachines), washingController.getMachinesAvailable);
+router.route('/machines-available').get(validate(washingMachinesValidation.getMachines), washingController.getMachinesAvail);
 
 router
 	.route('/:machineId')
