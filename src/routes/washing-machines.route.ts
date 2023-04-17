@@ -11,6 +11,10 @@ router
 	.get(validate(washingMachinesValidation.getMachines), washingController.getMachines);
 
 router
+	.route('/machines-available')
+	.get(validate(washingMachinesValidation.getMachines), washingController.getMachinesAvailable);
+
+router
 	.route('/:machineId')
 	.get(validate(washingMachinesValidation.getMachine), washingController.getMachine)
 	.patch(validate(washingMachinesValidation.updateMachine), washingController.updateMachine)
