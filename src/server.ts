@@ -8,7 +8,7 @@ import { pagination } from 'typeorm-pagination';
 
 import Errors from './shared/errors/errors';
 import AppError from './shared/errors/app-error';
-import Routes from './routes';
+import Routes from './routes/v1';
 
 import Cron from 'node-cron';
 import LineNotify from './shared/utils/lineNotify';
