@@ -8,7 +8,12 @@ import { pagination } from 'typeorm-pagination';
 
 import Errors from './shared/errors/errors';
 import AppError from './shared/errors/app-error';
-import Routes from './routes';
+import Routes from './routes/v1';
+
+import Cron from 'node-cron';
+import LineNotify from './shared/utils/lineNotify';
+
+import Config from './config/config';
 
 class Server {
 	public app: express.Application;
@@ -18,6 +23,7 @@ class Server {
 		this.middleware();
 		this.routes();
 		this.initializeErrorHandling();
+		this.cronJob();
 	}
 
 	private middleware() {
@@ -66,6 +72,10 @@ class Server {
 
 	private initializeErrorHandling() {
 		this.app.use(Errors);
+	}
+
+	private cronJob() {
+		Cron.schedule(Config.JOB_SCHDULE, LineNotify);
 	}
 }
 

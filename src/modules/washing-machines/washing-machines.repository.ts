@@ -3,6 +3,7 @@ import WashingMachines from './entities/washing-machines.entities';
 import { CreateMachine, UpdateMachine } from '@modules/washing-machines/interfaces/washing-machines.interface';
 import AppError from '../../shared/errors/app-error';
 import httpStatus from 'http-status';
+import { Status } from './enum/washing-machines.enum';
 
 @EntityRepository(WashingMachines)
 class WashingMachinesRepository extends Repository<WashingMachines> {
@@ -25,8 +26,15 @@ class WashingMachinesRepository extends Repository<WashingMachines> {
 	}
 
 	/**
+	 * Find available machine
+	 */
+	public async findAvail() {
+		return this.find({ where: { status: Status.AVAILABLE } });
+	}
+
+	/**
 	 * Get machine by id
-	 * @param {ObjectId} id
+	 * @param {machineId} id
 	 * @returns {Promise<Machine>}
 	 */
 	public async getMachineById(id: number) {

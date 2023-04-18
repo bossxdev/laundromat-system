@@ -21,6 +21,13 @@ class WashingMachinesService {
 	}
 
 	/**
+	 * Find all available
+	 */
+	public async queryMachinesAvail() {
+		return await getCustomRepository(WashingMachinesRepository).findAvail();
+	}
+
+	/**
 	 * Find Washing machine by id
 	 * @param id machineId
 	 */

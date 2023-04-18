@@ -9,6 +9,7 @@ const envVarsSchema = Joi.object()
 		NODE_ENV: Joi.string().valid('production', 'development', 'test').required(),
 		PORT: Joi.number().default(3000),
 		TOKEN: Joi.string().required(),
+		LINE_TOKEN: Joi.string().required(),
 	})
 	.unknown();
 
@@ -22,4 +23,5 @@ export = {
 	env: envVars.NODE_ENV,
 	port: envVars.PORT,
 	token: envVars.TOKEN,
+	line_token: envVars.LINE_TOKEN,
 };
