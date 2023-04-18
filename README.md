@@ -1,6 +1,11 @@
 # Laundromat System
 
-Laundromat system design node express typescript with type orm version 1.0.0 configuration node express typescript with type orm.
+Laundromat System design based on TypeScript in an Express with TypeORM version 1.0.0 including
+1. Two major modules solve Washing-Machines and Payments modules
+2. Docker Compose for Building Container Services
+3. and finally the Postman export file for testing.
+
+*** Note: Due to technical issues, Swagger cannot be used. The problem I have is that Swagger returns a blank HTML page. ***
 
 ## Flowchart Deisgn
 
