@@ -1,3 +1,3 @@
 export default {
-	JOB_SCHDULE: '* * * * * *',
+	JOB_SCHDULE: '*/1  * * * *',
 };

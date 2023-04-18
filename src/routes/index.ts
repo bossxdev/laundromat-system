@@ -1,5 +1,6 @@
 import express from 'express';
 import washingRoute from './washing-machines.route';
+import paymentRoute from './payments.route';
 import docsRoute from './docs.route';
 
 import config from '../config/environment.config';
@@ -11,6 +12,10 @@ const defaultRoutes = [
 	{
 		path: '/washing-machines',
 		route: washingRoute,
+	},
+	{
+		path: '/payments',
+		route: paymentRoute,
 	},
 ];
 
