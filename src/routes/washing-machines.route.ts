@@ -10,12 +10,12 @@ router
 	.post(validate(washingMachinesValidation.createMachine), washingController.createMachine)
 	.get(validate(washingMachinesValidation.getMachines), washingController.getMachines);
 
+router.route('/machines-available').get(validate(washingMachinesValidation.getMachines), washingController.getMachinesAvail);
+
 router
 	.route('/:machineId')
 	.get(validate(washingMachinesValidation.getMachine), washingController.getMachine)
 	.patch(validate(washingMachinesValidation.updateMachine), washingController.updateMachine)
 	.delete(validate(washingMachinesValidation.deleteMachine), washingController.deleteMachine);
-
-router.route('/machines-available').get(validate(washingMachinesValidation.getMachines), washingController.getMachinesAvail);
 
 export default router;
