@@ -1,7 +1,7 @@
 import express from 'express';
-import validate from '../../shared/middlewares/validate';
-import paymentValidation from '../../modules/payments/validations/payment.validation';
-import paymentController from '../../modules/payments/payment.controller';
+import validate from '../shared/middlewares/validate';
+import paymentValidation from '../modules/payments/validations/payment.validation';
+import paymentController from '../modules/payments/payment.controller';
 
 const router = express.Router();
 

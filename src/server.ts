@@ -8,7 +8,7 @@ import { pagination } from 'typeorm-pagination';
 
 import Errors from './shared/errors/errors';
 import AppError from './shared/errors/app-error';
-import Routes from './routes/v1';
+import Routes from './routes';
 
 import Cron from 'node-cron';
 import LineNotify from './shared/utils/lineNotify';
@@ -44,7 +44,7 @@ class Server {
 	}
 
 	private routes() {
-		this.app.use('/v1', Routes);
+		this.app.use('/', Routes);
 
 		this.app.all('*', (req: Request, res: Response, next: NextFunction) => {
 			res.status(404).json({

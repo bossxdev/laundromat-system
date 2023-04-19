@@ -3,7 +3,7 @@ import washingRoute from './washing-machines.route';
 import paymentRoute from './payments.route';
 import docsRoute from './docs.route';
 
-import config from '../../config/environment.config';
+import config from '../config/environment.config';
 const { env } = config;
 
 const router = express.Router();

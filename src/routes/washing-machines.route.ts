@@ -1,7 +1,7 @@
 import express from 'express';
-import validate from '../../shared/middlewares/validate';
-import washingMachinesValidation from '../../modules/washing-machines/validations/washing-machines.validation';
-import washingController from '../../modules/washing-machines/washing-machines.controller';
+import validate from '../shared/middlewares/validate';
+import washingMachinesValidation from '../modules/washing-machines/validations/washing-machines.validation';
+import washingController from '../modules/washing-machines/washing-machines.controller';
 
 const router = express.Router();
 
