@@ -5,7 +5,7 @@ Laundromat System design based on TypeScript in an Express with TypeORM version 
 2. Docker Compose for Building Container Services
 3. and finally the Postman export file for testing.
 
-*** Note: Due to technical issues, Swagger cannot be used. The problem I have is that Swagger returns a blank HTML page. ***
+*** Note: Due to technical issues, Swagger cannot be used. The problem I have is that Swagger returns a blank page. ***
 
 ## Flowchart Deisgn
 
