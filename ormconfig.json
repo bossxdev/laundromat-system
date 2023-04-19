@@ -7,11 +7,5 @@
 	"database": "laundromat",
 	"synchronize": true,
 	"logging": false,
-	"entities": ["./src/modules/**/entities/*ts"],
-	"migrations": [
-		"./src/shared/migrations/*.ts"
-	],
-	"cli": {
-		"migrationsDir": "./src/shared/migrations"
-	}
+	"entities": ["./src/modules/**/entities/*ts"]
 }
