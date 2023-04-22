@@ -1,6 +1,6 @@
 import { EntityRepository, Repository } from 'typeorm';
 import WashingMachines from './entities/washing-machines.entities';
-import { CreateMachine, UpdateMachine } from '@modules/washing-machines/interfaces/washing-machines.interface';
+import { CreateMachine, UpdateMachine } from '../../modules/washing-machines/interfaces/washing-machines.interface';
 import AppError from '../../shared/errors/app-error';
 import httpStatus from 'http-status';
 import { Status } from './enum/washing-machines.enum';
