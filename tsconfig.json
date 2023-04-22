@@ -26,20 +26,6 @@
     "forceConsistentCasingInFileNames": true,
     "strictPropertyInitialization": false,
     "baseUrl": "./",
-    "paths": {
-      "@config/*": [
-        "src/config/*"
-      ],
-      "@shared/*": [
-        "src/shared/*"
-      ],
-      "@modules/*": [
-        "src/modules/*"
-      ],
-      "@router/*": [
-        "src/routers/*"
-      ]
-    },
 		"typeRoots": [
       "@types",
       "./node_modules/@types"
